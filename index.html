@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="ReadySetLaunch — Go from idea to launch confidence with checklists, simulations, and roadmaps."/>
+  <title>ReadySetLaunch</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/variables.css"/>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/components.css"/>
+  <link rel="stylesheet" href="css/pages.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+</head>
+<body>
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav id="mainNav" style="display:none;">
+  <a class="nav-logo" onclick="showPage('home')">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+      <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+    </svg>
+    ReadySetLaunch
+  </a>
+  <div class="nav-icons">
+    <button class="nav-icon-btn" onclick="showPage('home')" title="Home">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    </button>
+    <button class="nav-icon-btn" onclick="showPage('history')" title="History">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════════ HOME PAGE ══════════════ -->
+<div id="home" class="page active">
+  <div class="home-hero">
+    <div class="home-title">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2de09e" stroke-width="2.2" style="vertical-align:middle;margin-right:10px">
+        <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+        <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+      </svg>
+      ReadySetLaunch
+    </div>
+    <p class="home-subtitle">From <span class="hl-green">Idea</span> → <span class="hl-blue">Launch Confidence</span></p>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        <div><div class="stat-val">4</div><div class="stat-label">Projects Created</div></div>
+      </div>
+      <div class="stat-card">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        <div><div class="stat-val">73%</div><div class="stat-label">Avg Readiness</div></div>
+      </div>
+    </div>
+
+    <div class="continue-card" onclick="showPage('checklist')">
+      <svg width="20" height="20" fill="none" stroke="#2de09e" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <div class="cc-text">
+        <div class="cc-label">Continue where you left off</div>
+        <div class="cc-name">dgh</div>
+      </div>
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+    </div>
+
+    <div class="mode-grid">
+      <div class="mode-card practice" onclick="showPage('checklist')">
+        <div class="mode-icon green">🎯</div>
+        <h3>Practice Mode</h3>
+        <p>Test your product readiness with checklists, simulations, and improvement roadmaps.</p>
+        <div class="mode-link green">Start Practice <span>→</span></div>
+      </div>
+      <div class="mode-card marketing" onclick="showPage('platform')">
+        <div class="mode-icon blue">⚡</div>
+        <h3>Marketing Mode</h3>
+        <p>Build your go-to-market strategy with platform-specific tools and content generators.</p>
+        <div class="mode-link blue">Start Marketing <span>→</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ CHECKLIST PAGE ══════════════ -->
+<div id="checklist" class="page">
+  <div class="page-wrap">
+    <button class="back-btn" onclick="showPage('home')">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Back
+    </button>
+    <div class="mode-badge green"><span class="dot"></span> Practice Mode</div>
+    <div class="page-title">Launch Readiness</div>
+    <div class="page-subtitle">Complete all sections to maximize your launch success</div>
+
+    <div class="progress-card">
+      <div class="progress-icon">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      </div>
+      <div class="progress-info">
+        <h4 id="progressText">0 of 16 tasks completed</h4>
+        <p>Keep going — you're building launch momentum</p>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar" id="progressBar" style="width:0%"></div>
+        </div>
+      </div>
+      <div class="progress-pct" id="progressPct">0%</div>
+    </div>
+
+    <div class="checklist-grid">
+      <!-- Market Research -->
+      <div class="checklist-section">
+        <div class="section-header">
+          <div class="section-icon" style="background:rgba(45,224,158,0.15);">🔍</div>
+          <h4>Market Research</h4>
+          <span class="section-pct" style="color:var(--green)" id="pct-market">0%</span>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,'market')"><div class="check-circle"></div><span>Define target audience</span><span class="info-btn">ℹ</span></div>
+        <div class="check-item" onclick="toggleCheck(this,'market')"><div class="check-circle"></div><span>Analyse top 3 competitors</span><span class="info-btn">ℹ</span></div>
+        <div class="check-item" onclick="toggleCheck(this,'market')"><div class="check-circle"></div><span>Validate problem with 10 users</span><span class="info-btn">ℹ</span></div>
+        <div class="check-item" onclick="toggleCheck(this,'market')"><div class="check-circle"></div><span>Identify unique value proposition</span><span class="info-btn">ℹ</span></div>
+      </div>
+      <!-- Technical Readiness -->
+      <div class="checklist-section">
+        <div class="section-header">
+          <div class="section-icon" style="background:rgba(95,179,245,0.15);">⚙️</div>
+          <h4>Technical Readiness</h4>
+          <span class="section-pct" style="color:var(--blue-light)" id="pct-tech">0%</span>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,'tech')"><div class="check-circle"></div><span>Complete core feature development</span><span class="info-btn">ℹ</span></div>
+        <div class="check-item" onclick="toggleCheck(this,'tech')"><div class="check-circle"></div><span>Perform security audit</span><span class="info-btn">ℹ</span></div>
+        <div class="check-item" onclick="toggleCheck(this,'tech')"><div class="check-circle"></div><span>Set up monitoring & alerts</span><span class="info-btn">ℹ</span></div>
+        <div class="check-item" onclick="toggleCheck(this,'tech')"><div class="check-circle"></div><span>Load test for 10x expected traffic</span><span class="info-btn">ℹ</span></div>
+      </div>
+      <!-- Operations -->
+      <div class="checklist-section">
+        <div class="section-header">
+          <div class="section-icon" style="background:rgba(155,109,255,0.15);">📋</div>
+          <h4>Operations</h4>
+          <span class="section-pct" style="color:var(--purple)" id="pct-ops">0%</span>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,'ops')"><div class="check-circle"></div><span>Define pricing strategy</span><span class="info-btn">ℹ</span></div>
+        <div class="check-item" onclick="toggleCheck(this,'ops')"><div class="check-circle"></div><span>Set up customer support</span><span class="info-btn">ℹ</span></div>
+        <div class="check-item" onclick="toggleCheck(this,'ops')"><div class="check-circle"></div><span>Create onboarding documentation</span><span class="info-btn">ℹ</span></div>
+        <div class="check-item" onclick="toggleCheck(this,'ops')"><div class="check-circle"></div><span>Establish feedback loop</span><span class="info-btn">ℹ</span></div>
+      </div>
+      <!-- UX & Design -->
+      <div class="checklist-section">
+        <div class="section-header">
+          <div class="section-icon" style="background:rgba(240,100,200,0.15);">🎨</div>
+          <h4>UX &amp; Design</h4>
+          <span class="section-pct" style="color:#f064c8" id="pct-ux">0%</span>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,'ux')"><div class="check-circle"></div><span>Complete user flow mapping</span><span class="info-btn">ℹ</span></div>
+        <div class="check-item" onclick="toggleCheck(this,'ux')"><div class="check-circle"></div><span>Run usability testing</span><span class="info-btn">ℹ</span></div>
+        <div class="check-item" onclick="toggleCheck(this,'ux')"><div class="check-circle"></div><span>Optimise for mobile devices</span><span class="info-btn">ℹ</span></div>
+        <div class="check-item" onclick="toggleCheck(this,'ux')"><div class="check-circle"></div><span>Finalise brand assets</span><span class="info-btn">ℹ</span></div>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn-secondary" onclick="showPage('home')">← Back to Home</button>
+      <button class="btn-primary" onclick="showPage('roadmap')">View Launch Roadmap →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ ROADMAP PAGE ══════════════ -->
+<div id="roadmap" class="page">
+  <div class="page-wrap">
+    <button class="back-btn" onclick="showPage('checklist')">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Back
+    </button>
+    <div class="mode-badge green"><span class="dot"></span> Practice Mode</div>
+    <div class="page-title" style="text-align:center;">Launch Roadmap</div>
+    <p class="roadmap-subtitle">Your personalised 3-week path to launch readiness</p>
+
+    <div class="timeline">
+      <div class="timeline-week">
+        <div class="week-dot">W1</div>
+        <div class="week-card">
+          <h4>
+            <svg width="16" height="16" fill="none" stroke="#2de09e" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            Market Validation
+          </h4>
+          <div class="road-task">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            Conduct 5 user interviews <span class="badge high">high</span>
+          </div>
+          <div class="road-task">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            Define success metrics <span class="badge medium">medium</span>
+          </div>
+          <div class="road-task">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            Create feedback survey <span class="badge medium">medium</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-week">
+        <div class="week-dot">W2</div>
+        <div class="week-card">
+          <h4>
+            <svg width="16" height="16" fill="none" stroke="#4a90d9" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Product Refinement
+          </h4>
+          <div class="road-task">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            Fix critical bugs <span class="badge high">high</span>
+          </div>
+          <div class="road-task">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            Improve onboarding flow <span class="badge high">high</span>
+          </div>
+          <div class="road-task">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            Optimise performance <span class="badge medium">medium</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-week">
+        <div class="week-dot">W3</div>
+        <div class="week-card">
+          <h4>
+            <svg width="16" height="16" fill="none" stroke="#9b6dff" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Launch Preparation
+          </h4>
+          <div class="road-task">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/></svg>
+            Define pricing strategy <span class="badge high">high</span>
+          </div>
+          <div class="road-task">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/></svg>
+            Set up support system <span class="badge medium">medium</span>
+          </div>
+          <div class="road-task">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            Prepare marketing assets <span class="badge medium">medium</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="est-card">
+      <div class="est-label">
+        <svg width="20" height="20" fill="none" stroke="#2de09e" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div>
+          <h4>Estimated Time to Launch Ready</h4>
+          <p>Based on your current progress</p>
+        </div>
+      </div>
+      <div class="est-time">~3 Weeks</div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn-primary" onclick="showPage('simulation')">Try Launch Simulation →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ SIMULATION PAGE ══════════════ -->
+<div id="simulation" class="page">
+  <div class="page-wrap">
+    <div class="mode-badge green"><span class="dot"></span> Practice Mode</div>
+    <div class="page-title" style="text-align:center;">Launch Simulation</div>
+    <div class="page-subtitle" style="text-align:center;">dgh</div>
+    <div class="sim-container">
+      <div class="sim-start-card" id="simStart">
+        <div class="sim-icon-wrap">🚀</div>
+        <h3>Ready to Test Your Launch?</h3>
+        <p>Our AI will simulate your product launch and predict outcomes based on your current readiness.</p>
+        <button class="btn-primary" onclick="runSimulation()">🚀 Simulate Launch</button>
+      </div>
+      <div class="sim-result" id="simResult">
+        <div class="sim-metric">
+          <div class="sim-metric-icon" style="background:rgba(45,224,158,0.15);">
+            <svg width="20" height="20" fill="none" stroke="#2de09e" stroke-width="2" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+          </div>
+          <div class="sim-metric-info">
+            <h4>Adoption Prediction</h4>
+            <p>Expected user adoption rate</p>
+            <div class="sim-metric-bar"><div class="sim-metric-bar-fill" style="width:76%;background:var(--green)"></div></div>
+          </div>
+          <div class="sim-val" style="color:var(--green)">76%</div>
+        </div>
+        <div class="sim-metric">
+          <div class="sim-metric-icon" style="background:rgba(240,180,41,0.15);">
+            <svg width="20" height="20" fill="none" stroke="#f0b429" stroke-width="2" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div class="sim-metric-info" style="flex:1">
+            <h4>Risk Level</h4>
+            <p>Based on current readiness</p>
+          </div>
+          <div class="risk-badge medium">Medium Risk</div>
+        </div>
+        <div class="improvements-card">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+            <div class="sim-metric-icon" style="background:rgba(74,144,217,0.15);width:44px;height:44px;border-radius:10px;flex-shrink:0">
+              <svg width="20" height="20" fill="none" stroke="#5fb3f5" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div>
+              <h4>Suggested Improvements</h4>
+              <p>Actions to improve launch success</p>
+            </div>
+          </div>
+          <div class="improvement-item">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg>
+            Add user onboarding tutorial <span class="badge high" style="margin-left:auto">high impact</span>
+          </div>
+          <div class="improvement-item">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg>
+            Implement feedback collection <span class="badge medium" style="margin-left:auto">medium impact</span>
+          </div>
+          <div class="improvement-item">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg>
+            Set up analytics tracking <span class="badge medium" style="margin-left:auto">medium impact</span>
+          </div>
+          <div class="improvement-item">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg>
+            Create help documentation <span class="badge low" style="margin-left:auto">low impact</span>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button class="btn-secondary" onclick="resetSimulation()">↺ Re-simulate</button>
+          <button class="btn-primary" onclick="showPage('history')">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            View Project History
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ PROJECT HISTORY PAGE ══════════════ -->
+<div id="history" class="page">
+  <div class="page-wrap">
+    <div class="page-title">Project History</div>
+    <div class="page-subtitle">Track your progress across all projects</div>
+    <div class="history-grid">
+      <div class="history-item" onclick="showPage('checklist')">
+        <div class="history-icon" style="background:rgba(45,224,158,0.15);">📱</div>
+        <div class="history-info">
+          <h4>dgh <span class="badge" style="background:rgba(45,224,158,0.15);color:var(--green);font-size:0.7rem">Practice</span></h4>
+          <p>
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Feb 18, 2026 &nbsp; Android
+          </p>
+        </div>
+        <div class="history-right">
+          <div class="history-pct"><div class="pct-val">62%</div><div class="pct-label">Readiness</div></div>
+          <div class="donut">
+            <svg viewBox="0 0 46 46"><circle cx="23" cy="23" r="18" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="5"/><circle cx="23" cy="23" r="18" fill="none" stroke="#f0b429" stroke-width="5" stroke-dasharray="113" stroke-dashoffset="43"/></svg>
+          </div>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </div>
+      </div>
+      <div class="history-item">
+        <div class="history-icon" style="background:rgba(74,144,217,0.15);">🌐</div>
+        <div class="history-info">
+          <h4>qeewrty <span class="badge" style="background:rgba(74,144,217,0.15);color:var(--blue-light);font-size:0.7rem">Marketing</span></h4>
+          <p>
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Feb 17, 2026 &nbsp; Website
+          </p>
+        </div>
+        <div class="history-right">
+          <div class="history-pct"><div class="pct-val">77%</div><div class="pct-label">Readiness</div></div>
+          <div class="donut">
+            <svg viewBox="0 0 46 46"><circle cx="23" cy="23" r="18" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="5"/><circle cx="23" cy="23" r="18" fill="none" stroke="#2de09e" stroke-width="5" stroke-dasharray="113" stroke-dashoffset="26"/></svg>
+          </div>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </div>
+      </div>
+      <div class="history-item">
+        <div class="history-icon" style="background:rgba(45,224,158,0.15);">📱</div>
+        <div class="history-info">
+          <h4>fgsdhfjgh <span class="badge" style="background:rgba(45,224,158,0.15);color:var(--green);font-size:0.7rem">Practice</span></h4>
+          <p>
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Feb 17, 2026 &nbsp; Android
+          </p>
+        </div>
+        <div class="history-right">
+          <div class="history-pct"><div class="pct-val">77%</div><div class="pct-label">Readiness</div></div>
+          <div class="donut">
+            <svg viewBox="0 0 46 46"><circle cx="23" cy="23" r="18" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="5"/><circle cx="23" cy="23" r="18" fill="none" stroke="#2de09e" stroke-width="5" stroke-dasharray="113" stroke-dashoffset="26"/></svg>
+          </div>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </div>
+      </div>
+    </div>
+    <p class="history-compare-hint">Click on a project to resume it</p>
+  </div>
+</div>
+
+<!-- ══════════════ PLATFORM SELECTION PAGE ══════════════ -->
+<div id="platform" class="page">
+  <div class="page-wrap">
+    <button class="back-btn" onclick="showPage('home')">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Back
+    </button>
+    <div class="mode-badge blue"><span class="dot"></span> Marketing Mode</div>
+    <div class="page-title" style="text-align:center;">Select Your Platform</div>
+    <div class="page-subtitle" style="text-align:center;">What type of product are you building?</div>
+    <div class="platform-grid">
+      <div class="platform-card" onclick="selectPlatform(this)">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+        <span>Android App</span>
+      </div>
+      <div class="platform-card" onclick="selectPlatform(this)">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span>Website</span>
+      </div>
+      <div class="platform-card" onclick="selectPlatform(this)">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <span>macOS App</span>
+      </div>
+      <div class="platform-card" onclick="selectPlatform(this)">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 13.78 5 22 8 22c1.25 0 2.5-1.06 4-1.06z"/></svg>
+        <span>iOS App</span>
+      </div>
+      <div class="platform-card" onclick="selectPlatform(this)">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/></svg>
+        <span>AI Tool</span>
+      </div>
+      <div class="platform-card" onclick="selectPlatform(this)">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+        <span>SaaS Product</span>
+      </div>
+      <div class="platform-card" onclick="selectPlatform(this)">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <span>Digital Service</span>
+      </div>
+    </div>
+    <p class="recommend-hint">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/></svg>
+      Not sure? Recommend for me ✨
+    </p>
+    <div class="btn-row">
+      <button class="btn-primary" onclick="showPage('productInput')">Continue →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ PRODUCT INPUT PAGE ══════════════ -->
+<div id="productInput" class="page">
+  <div class="page-wrap">
+    <button class="back-btn" onclick="showPage('platform')">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Back
+    </button>
+    <div class="mode-badge blue"><span class="dot"></span> Marketing Mode</div>
+    <div class="page-title">Product Workspace</div>
+    <div class="page-subtitle">Tell us about your product</div>
+
+    <div class="product-layout">
+      <div>
+        <div class="form-section">
+          <div class="form-label">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46"/></svg>
+            Project Name
+          </div>
+          <input class="form-input" placeholder="Enter your project name" oninput="updateReadiness()" id="projName"/>
+        </div>
+        <div class="form-section">
+          <div class="form-label">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            Target Users
+          </div>
+          <textarea class="form-textarea" placeholder="Describe your target audience..." oninput="updateReadiness()" id="targetUsers"></textarea>
+        </div>
+        <div class="form-section">
+          <div class="form-label">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/></svg>
+            Problem Statement
+          </div>
+          <textarea class="form-textarea" placeholder="What problem are you solving?" oninput="updateReadiness()" id="problemStmt"></textarea>
+        </div>
+        <div class="form-section">
+          <div class="form-label">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/></svg>
+            Key Features
+          </div>
+          <textarea class="form-textarea" placeholder="List your main features..." oninput="updateReadiness()" id="keyFeatures"></textarea>
+        </div>
+        <div class="btn-row" style="justify-content:flex-start;">
+          <button class="btn-primary" onclick="showPage('checklist')">Analyse My Product →</button>
+        </div>
+      </div>
+      <div class="readiness-meter">
+        <h4>
+          <svg width="14" height="14" fill="none" stroke="#f0b429" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/></svg>
+          Live Readiness Meter
+        </h4>
+        <div class="gauge-wrap">
+          <svg viewBox="0 0 140 140">
+            <circle cx="70" cy="70" r="55" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="10"/>
+            <circle cx="70" cy="70" r="55" fill="none" stroke="#5fb3f5" stroke-width="10"
+              stroke-dasharray="345.4" id="gaugeFill"
+              stroke-dashoffset="311" stroke-linecap="round"/>
+          </svg>
+          <div class="gauge-text">
+            <div class="g-val" id="gaugeVal">10%</div>
+            <div class="g-label">Readiness</div>
+          </div>
+        </div>
+        <div class="accuracy-row">
+          <span>Checklist Accuracy</span>
+          <span class="accuracy-val" id="accuracyVal">2%</span>
+        </div>
+        <div class="accuracy-bar"><div class="accuracy-fill" id="accuracyFill"></div></div>
+        <p class="readiness-hint">Fill in more details to increase your readiness score</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/router.js"></script>
+<script src="js/checklist.js"></script>
+<script src="js/simulation.js"></script>
+<script src="js/readiness.js"></script>
+</body>
+</html>
