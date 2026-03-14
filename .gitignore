@@ -1,14 +1,17 @@
-# OS files
+# Environment
+.env
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
 .DS_Store
 Thumbs.db
 
-# Editor directories
+# Editor
 .vscode/
 .idea/
-
-# Node (if you add a dev server later)
-node_modules/
-npm-debug.log*
-
-# Misc
-*.log
